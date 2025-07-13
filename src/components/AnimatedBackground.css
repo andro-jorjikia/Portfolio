@@ -1,0 +1,43 @@
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.animated-bg__bubble {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform, opacity;
+  animation: float-bubble var(--duration, 16s) ease-in-out infinite alternate;
+  transition: box-shadow 0.3s;
+}
+.animated-bg__bubble {
+  /* Parallax effect */
+  transform: translate3d(
+    calc((var(--mx, 0.5) - 0.5) * 60px * var(--parallax, 1)),
+    calc((var(--my, 0.5) - 0.5) * 60px * var(--parallax, 1)),
+    0
+  );
+}
+@keyframes float-bubble {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-40px) scale(1.08); }
+}
+
+.animated-bg__sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 60%, #3b82f6 100%);
+  opacity: 0.7;
+  filter: blur(0.5px);
+  animation: sparkle 2.5s infinite alternate;
+  pointer-events: none;
+}
+@keyframes sparkle {
+  0% { opacity: 0.2; transform: scale(0.7) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(20deg); }
+  100% { opacity: 0.2; transform: scale(0.7) rotate(0deg); }
+} 
