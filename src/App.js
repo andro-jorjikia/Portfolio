@@ -42,12 +42,19 @@ const projects = [
     images: ["/images/cube.png"]
   },
   {
-    id: 'weather-app',
-    title: "Weather Dashboard",
-    description: "Weather application using OpenWeatherMap API with beautiful visualizations and real-time data.",
-    technologies: ["React", "Chart.js", "OpenWeatherMap API", "CSS3"],
-    githubLink: "https://github.com/andro-jorjikia/weather-app",
-    images: ["/images/weather1.png"]
+    id: 'Todo list',
+    title: "Todo List React-native",
+    description: "A clean and functional todo list mobile app built with React Native and Expo.", 
+    technologies: ["React Native", "JavaScript", "SVG", "Animated API", "Expo"],
+    githubLink: "https://github.com/andro-jorjikia/TodoList-react-native",
+    images: [
+      "/images/done-screenligjt.png",
+      "/images/donescreen.png",
+      "/images/enterthetaskerror.png",
+      "/images/inprogress.png",
+      "/images/main-page.png",
+      "/images/todo-task-ligfht.png"
+    ]
   },
 ];
 
@@ -174,6 +181,12 @@ Whether it's web, mobile, or UI/UX — I love turning ideas into real products p
             <FaLinkedin size={28} />
           </a>
         </div>
+        <div> 
+          <h1 style={{textAlign: 'center', color: '#f2424242', fontSize: '1.2em'}}> 
+            The videos of the projects are available on my linkedin profile
+          </h1>
+        </div>
+
         
         <div className="signature-animated">Andro Jorjikia</div>
       </section>
