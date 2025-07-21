@@ -56,6 +56,7 @@ const projects = [
       "/images/todo-task-ligfht.png"
     ]
   },
+
 ];
 
 function SkillBar({ skill, level }) {
