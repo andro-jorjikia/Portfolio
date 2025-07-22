@@ -6,8 +6,6 @@ import ProjectDetails from './components/ProjectDetails';
 import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 const skillLevels = {
-  'HTML': 0,
-  'CSS': 0,
   'JavaScript': 0,
   'React': 0,
   'React-Native': 0,
@@ -58,8 +56,6 @@ const projects = [
 ];
 
 const skillLinks = {
-  'HTML': 'https://developer.mozilla.org/en-US/docs/Web/HTML',
-  'CSS': 'https://developer.mozilla.org/en-US/docs/Web/CSS',
   'JavaScript': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   'React': 'https://react.dev/',
   'React-Native': 'https://reactnative.dev/docs/getting-started',
