@@ -155,10 +155,9 @@ Let's build something impactful — from Georgia to the world.<br /> <strong>Bas
       {/* Fun Facts Section */}
       <section className="open-section funfacts-section" ref={funfactsRef} id="funfacts">
         <h2 className="section-title">Fun Facts</h2>
-        <ul style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center', color: '#334155', fontSize: '1.1rem', listStyle: 'none', padding: 0, marginBottom: '2em' }}>
+        <ul style={{ maxWidth: 800, margin: '0 auto', textAlign: 'center', color: '#334155', fontSize: '1.1rem', listStyle: 'none', padding: 0, marginBottom: '2em'}}>
           <li>🌍 <b>Multilingual:</b> I speak three languages: Georgian, English, and Russian.</li>
-          <li>🏃‍♂️ <b>Active Lifestyle:</b>  </li>
-          <li>📚 <b>Sci-Fi Fan:</b> I'm a big fan of sci-fi books and movies.</li>
+          <li>🎶 <b>Music Making:</b> I love techno musick and more i like to make it by myself</li>
           <li>☕ <b>Espresso Master:</b> I make a mean cup of espresso—strong, smooth, and no nonsense.</li>
           <li>🕺 <b>Confident Moves:</b> I can dance when the mood is right—and I don't mean just at weddings.</li>
         </ul> 
