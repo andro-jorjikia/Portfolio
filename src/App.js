@@ -6,13 +6,12 @@ import ProjectDetails from './components/ProjectDetails';
 import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 const skillLevels = {
-  'JavaScript': 95,
-  'React': 92,
-  'Python': 80,
-  'Git': 85,
-  'React-Native': 80,
-  'Node.js': 64,
-  'MongoDB': 70,
+  'HTML': 0,
+  'CSS': 0,
+  'JavaScript': 0,
+  'React': 0,
+  'React-Native': 0,
+  'Git': 0,
 };
 
 const projects = [
@@ -56,32 +55,33 @@ const projects = [
       "/images/todo-task-ligfht.png"
     ]
   },
-
 ];
 
-function SkillBar({ skill, level }) {
-  const barRef = useRef();
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (barRef.current) {
-        barRef.current.style.width = level + '%';
-      }
-    }, 400);
-    return () => clearTimeout(timeout);
-  }, [level]);
+const skillLinks = {
+  'HTML': 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+  'CSS': 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+  'JavaScript': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+  'React': 'https://react.dev/',
+  'React-Native': 'https://reactnative.dev/docs/getting-started',
+  'Git': 'https://git-scm.com/doc',
+};
+
+function SkillBar({ skill, link }) {
   return (
-    <div className="skill-bar">
-      <span className="skill-bar-label">{skill}</span>
-      <div className="skill-bar-track">
-        <div className="skill-bar-fill" ref={barRef} style={{width: 0}} />
-      </div>
-      <span className="skill-bar-percent">{level}%</span>
-    </div>
+    <a
+      className="skill-chip"
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      tabIndex={0}
+      aria-label={skill + ' documentation'}
+    >
+      {skill}
+    </a>
   );
 }
 
 function Home({ projects }) {
-  // Animated scroll-in for sections
   const useAnimateOnScroll = (className = 'section-in') => {
     const ref = useRef();
     useEffect(() => {
@@ -104,10 +104,12 @@ function Home({ projects }) {
   const skillsRef = useAnimateOnScroll();
   const projectsRef = useAnimateOnScroll();
   const contactRef = useAnimateOnScroll();
+  const funfactsRef = useAnimateOnScroll();
 
   return (
     <>
       <AnimatedBackground />
+
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
@@ -125,11 +127,11 @@ Let's build something impactful — from Georgia to the world.<br /> <strong>Bas
       <section className="open-section about-section" ref={aboutRef} id="about">
         <h2 className="section-title">About Me</h2>
         <p className="section-desc">
-        Hey, I'm a frontend developer from Tbilisi, Georgia. I got into coding by teaching myself and building real projects — no degree, just a lot of curiosity and late nights.
+          Hey, I'm a frontend developer from Tbilisi, Georgia. I got into coding by teaching myself and building real projects — no degree, just a lot of curiosity and late nights.
 
-I enjoy creating clean, responsive websites and web apps that look good and work well. Lately, I've been working with tools like React, JavaScript, React Native and MySQL, and I'm always learning something new.
+          I enjoy creating clean, responsive websites and web apps that look good and work well. Lately, I've been working with tools like React, JavaScript, React Native and MySQL, and I'm always learning something new.
 
-Whether it's web, mobile, or UI/UX — I love turning ideas into real products people can use.
+          Whether it's web, mobile, or UI/UX — I love turning ideas into real products people can use.
         </p>
         <ul className="about-list">
           <li>👨‍💻 Frontend Developer</li>
@@ -145,9 +147,25 @@ Whether it's web, mobile, or UI/UX — I love turning ideas into real products p
         <h2 className="section-title">Skills & Technologies</h2>
         <div className="skills-grid">
           {Object.keys(skillLevels).map(skill => (
-            <SkillBar key={skill} skill={skill} level={skillLevels[skill]} />
+            <SkillBar key={skill} skill={skill} link={skillLinks[skill]} />
           ))}
         </div>
+      </section>
+
+
+      <div className="section-separator" />
+
+
+      {/* Fun Facts Section */}
+      <section className="open-section funfacts-section" ref={funfactsRef} id="funfacts">
+        <h2 className="section-title">Fun Facts</h2>
+        <ul style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center', color: '#334155', fontSize: '1.1rem', listStyle: 'none', padding: 0, marginBottom: '2em' }}>
+          <li>🌍 <b>Multilingual:</b> I speak three languages: Georgian, English, and Russian.</li>
+          <li>🏃‍♂️ <b>Active Lifestyle:</b>  </li>
+          <li>📚 <b>Sci-Fi Fan:</b> I'm a big fan of sci-fi books and movies.</li>
+          <li>☕ <b>Espresso Master:</b> I make a mean cup of espresso—strong, smooth, and no nonsense.</li>
+          <li>🕺 <b>Confident Moves:</b> I can dance when the mood is right—and I don't mean just at weddings.</li>
+        </ul> 
       </section>
 
       <div className="section-separator" />
@@ -171,7 +189,7 @@ Whether it's web, mobile, or UI/UX — I love turning ideas into real products p
           <a href="mailto:androjorjikia@yahoo.com" className="contact-link">androjorjikia@yahoo.com</a>
           <span className="contact-location">Tbilisi, Georgia</span>
         </div>
-        <div className="hero-socials" style={{marginBottom: 24}}>
+        <div className="hero-socials" style={{ marginBottom: 24 }}>
           <a href="https://github.com/andro-jorjikia" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub size={28} />
           </a>
@@ -183,12 +201,11 @@ Whether it's web, mobile, or UI/UX — I love turning ideas into real products p
           </a>
         </div>
         <div> 
-          <h1 style={{textAlign: 'center', color: '#f2424242', fontSize: '1.2em'}}> 
+          <h1 style={{ textAlign: 'center', color: '#2424242', fontSize: '1.2em' }}>
             The videos of the projects are available on my linkedin profile
           </h1>
         </div>
-
-        
+       
         <div className="signature-animated">Andro Jorjikia</div>
       </section>
     </>
@@ -222,4 +239,3 @@ function App() {
 }
 
 export default App;
-
