@@ -44,7 +44,7 @@ export default function AnimatedBackground() {
             opacity: b.opacity,
             animationDuration: `${10 + b.speed * 8}s`,
             filter: 'blur(2px)',
-            background: 'radial-gradient(circle at 30% 30%, #3b82f6 60%, #60a5fa 100%)',
+            background: 'radial-gradient(circle at 30% 30%,rgb(224, 96, 230) 60%,rgb(239, 61, 248) 60%)',
             '--parallax': b.speed,
           }}
         />

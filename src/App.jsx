@@ -5,63 +5,86 @@ import AnimatedBackground from './components/AnimatedBackground';
 import ProjectDetails from './components/ProjectDetails';
 import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
+// Skills
 const skillLevels = {
-  'JavaScript': 0,
-  'React': 0,
-  'React-Native': 0,
-  'Git': 0,
+  'Virtual Asisstance': 0,
+ ' Email management': 0,
+  'Calendar management': 0,
+  'Writing': 0,
+  'Data entry': 0,
+  'Research': 0,
 };
 
+//projects
 const projects = [
   {
-    id: 'recipe-app',
-    title: "Recipe App",
-    description: "A full-stack recipe application with backend, API and mobile frontend.",
-    technologies: ["React-Native", "JavaScript", "CSS3", "JSX", "Expo", "Node.js", "Express", "Neon DB", "mealApi"],
-    githubLink: "https://github.com/andro-jorjikia/Recipe-app",
+    id: 'writing',
+    title: "project ",
+    description: "",
+    technologies: [""],
+    githubLink: "",
     images: [
-      "/images/HomeIMG.png",
-      "/images/SignUp.png",
-      "/images/signinIMG.png",
-      "/images/LogoutIMG.png",
-      "/images/FavoritesIMG.png",
-      "/images/IngredientsIMG.png",
-      "/images/RecipeDetails.png",
-      "/images/SearchIMG.png"
+      "/images/faqbot-home.png",
+      "/images/faqbot-chat.png"
     ]
   },
   {
-    id: '3D cube',
-    title: "3D Cube",
-    description: "3D cube with 3D animation and 3D rotation.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    githubLink: "https://github.com/andro-jorjikia/3D-Cube",
-    images: ["/images/cube.png"]
+    id: 'writing',
+    title: "project ",
+    description: "",
+    technologies: [""],
+    githubLink: "",
+    images: [
+      "/images/faqbot-home.png",
+      "/images/faqbot-chat.png"
+    ]
   },
   {
-    id: 'Todo list',
-    title: "Todo List React-native",
-    description: "A clean and functional todo list mobile app built with React Native and Expo.", 
-    technologies: ["React Native", "JavaScript", "SVG", "Animated API", "Expo"],
-    githubLink: "https://github.com/andro-jorjikia/TodoList-react-native",
+    id: 'writing',
+    title: "project ",
+    description: "",
+    technologies: [""],
+    githubLink: "",
     images: [
-      "/images/done-screenligjt.png",
-      "/images/donescreen.png",
-      "/images/enterthetaskerror.png",
-      "/images/inprogress.png",
-      "/images/main-page.png",
-      "/images/todo-task-ligfht.png"
+      "/images/faqbot-home.png",
+      "/images/faqbot-chat.png"
+    ]
+  },
+  {
+    id: 'writing',
+    title: "project ",
+    description: "",
+    technologies: [""],
+    githubLink: "",
+    images: [
+      "/images/faqbot-home.png",
+      "/images/faqbot-chat.png"
+    ]
+  },
+  {
+    id: 'writing',
+    title: "project ",
+    description: "",
+    technologies: [""],
+    githubLink: "",
+    images: [
+      "/images/faqbot-home.png",
+      "/images/faqbot-chat.png"
     ]
   },
 ];
 
+// Links for skill reference
 const skillLinks = {
   'JavaScript': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   'React': 'https://react.dev/',
-  'React-Native': 'https://reactnative.dev/docs/getting-started',
-  'Git': 'https://git-scm.com/doc',
+  'Node.js': 'https://nodejs.org/en/docs/',
+  'Rasa': 'https://rasa.com/docs/',
+  'Dialogflow': 'https://cloud.google.com/dialogflow/docs',
+  'Telegram Bots': 'https://core.telegram.org/bots/api',
 };
 
+// Skill chip component
 function SkillBar({ skill, link }) {
   return (
     <a
@@ -77,6 +100,7 @@ function SkillBar({ skill, link }) {
   );
 }
 
+// Home / Portfolio page
 function Home({ projects }) {
   const useAnimateOnScroll = (className = 'section-in') => {
     const ref = useRef();
@@ -109,10 +133,12 @@ function Home({ projects }) {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h1 className="hero-title">Andro Jorjikia</h1>
-          <p className="hero-desc">Crafting sleek, modern interfaces for the web and mobile.
-Self-taught developer blending frontend creativity with backend logic.
-Let's build something impactful — from Georgia to the world.<br /> <strong>Based in Tbilisi, Georgia.</strong></p>
+          <h1 className="hero-title">Anna Papalashvili</h1>
+          <p className="hero-desc">
+            Building powerful and intelligent chatbots that automate tasks, support users, and drive engagement.  
+            Self-taught developer turning innovative ideas into functional products — from Georgia to the world.  
+            <br /> <strong>Based in Tbilisi, Georgia.</strong>
+          </p>
           <a href="#contact" className="hero-cta">Contact Me</a>
         </div>
       </section>
@@ -123,16 +149,12 @@ Let's build something impactful — from Georgia to the world.<br /> <strong>Bas
       <section className="open-section about-section" ref={aboutRef} id="about">
         <h2 className="section-title">About Me</h2>
         <p className="section-desc">
-          Hey, I'm a frontend developer from Tbilisi, Georgia. I got into coding by teaching myself and building real projects — no degree, just a lot of curiosity and late nights.
-
-          I enjoy creating clean, responsive websites and web apps that look good and work well. Lately, I've been working with tools like React, JavaScript, React Native and MySQL, and I'm always learning something new.
-
-          Whether it's web, mobile, or UI/UX — I love turning ideas into real products people can use.
+          anna bios here
         </p>
         <ul className="about-list">
-          <li>👨‍💻 Frontend Developer</li>
+          <li>🤖 Chatbot & Frontend Developer</li>
           <li>🌍 Tbilisi, Georgia</li>
-          <li>💡 Web, Mobile, UI/UX</li>
+          <li>💡 Web, Mobile & Intelligent Chat Solutions</li>
         </ul>
       </section>
 
@@ -148,18 +170,16 @@ Let's build something impactful — from Georgia to the world.<br /> <strong>Bas
         </div>
       </section>
 
-
       <div className="section-separator" />
-
 
       {/* Fun Facts Section */}
       <section className="open-section funfacts-section" ref={funfactsRef} id="funfacts">
         <h2 className="section-title">Fun Facts</h2>
         <ul style={{ maxWidth: 800, margin: '0 auto', textAlign: 'center', color: '#334155', fontSize: '1.1rem', listStyle: 'none', padding: 0, marginBottom: '2em'}}>
-          <li>🌍 <b>Multilingual:</b> I speak three languages: Georgian, English, and Russian.</li>
-          <li>🎶 <b>Music Making:</b> I love techno musick and more i like to make it by myself</li>
-          <li>☕ <b>Espresso Master:</b> I make a mean cup of espresso—strong, smooth, and no nonsense.</li>
-          <li>🕺 <b>Confident Moves:</b> I can dance when the mood is right—and I don't mean just at weddings.</li>
+          <li>🌍 <b>Trilingual:</b> Fluent in Georgian, English, and Russian.</li>
+          <li>🎶 <b>Music Enthusiast:</b> I enjoy producing techno and electronic music.</li>
+          <li>☕ <b>Espresso Lover:</b> I make a strong, smooth cup of espresso to fuel coding sessions.</li>
+          <li>🕹️ <b>Tech Hobbyist:</b> Experiment with AI, automation, and fun small projects in free time.</li>
         </ul> 
       </section>
 
@@ -169,7 +189,7 @@ Let's build something impactful — from Georgia to the world.<br /> <strong>Bas
       <section className="open-section projects-section" ref={projectsRef} id="projects">
         <h2 className="section-title">Projects</h2>
         <div className="projects-grid">
-          {projects.map((project, idx) => (
+          {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
@@ -196,17 +216,17 @@ Let's build something impactful — from Georgia to the world.<br /> <strong>Bas
           </a>
         </div>
         <div> 
-          <h1 style={{ textAlign: 'center', color: '#2424242', fontSize: '1.2em' }}>
-            The videos of the projects are available on my linkedin profile
+          <h1 style={{ textAlign: 'center', color: '#ff', fontSize: '1.2em' }}>
+            Demo videos of my chatbot projects are available on my LinkedIn profile
           </h1>
         </div>
-       
-        <div className="signature-animated">Andro Jorjikia</div>
+        <div className="signature-animated">anna papalashvili</div>
       </section>
     </>
   );
 }
 
+// Project Card
 function ProjectCard({ project }) {
   const { id, title, description, technologies, githubLink, images } = project;
   const thumbnail = images && images[0];
@@ -222,6 +242,7 @@ function ProjectCard({ project }) {
   );
 }
 
+// Main App
 function App() {
   return (
     <Router>

@@ -11,7 +11,23 @@
   will-change: transform, opacity;
   animation: float-bubble var(--duration, 16s) ease-in-out infinite alternate;
   transition: box-shadow 0.3s;
+  /* Girly pastel bubble colors */
+  background: radial-gradient(circle at 60% 40%, #ffe0f7 60%, #e0b3ff 100%);
+  box-shadow: 0 0 32px 0 #e0b3ff55, 0 0 64px 0 #ffb6c155;
 }
+.animated-bg__bubble:nth-child(3n) {
+  background: radial-gradient(circle at 40% 60%, #ffb6c1 60%, #ffd6ec 100%);
+  box-shadow: 0 0 32px 0 #ffb6c155, 0 0 64px 0 #ffe0f755;
+}
+.animated-bg__bubble:nth-child(4n) {
+  background: radial-gradient(circle at 70% 30%, #e0b3ff 60%, #b39ddb 100%);
+  box-shadow: 0 0 32px 0 #b39ddb55, 0 0 64px 0 #e0b3ff55;
+}
+.animated-bg__bubble:nth-child(5n) {
+  background: radial-gradient(circle at 30% 70%, #fffde7 60%, #ffe082 100%);
+  box-shadow: 0 0 32px 0 #ffe08255, 0 0 64px 0 #fffde755;
+}
+
 .animated-bg__bubble {
   /* Parallax effect */
   transform: translate3d(
@@ -30,14 +46,23 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: radial-gradient(circle, #fff 60%, #3b82f6 100%);
+  background: radial-gradient(circle, #fff 60%, #ffb6c1 100%);
   opacity: 0.7;
   filter: blur(0.5px);
   animation: sparkle 2.5s infinite alternate;
   pointer-events: none;
+  box-shadow: 0 0 8px 2px #e0b3ff88, 0 0 16px 4px #ffd6ec55;
+}
+.animated-bg__sparkle:nth-child(2n) {
+  background: radial-gradient(circle, #fff 60%, #e0b3ff 100%);
+  box-shadow: 0 0 8px 2px #ffb6c188, 0 0 16px 4px #e0b3ff55;
+}
+.animated-bg__sparkle:nth-child(3n) {
+  background: radial-gradient(circle, #fff 60%, #ffe082 100%);
+  box-shadow: 0 0 8px 2px #ffe08288, 0 0 16px 4px #fffde755;
 }
 @keyframes sparkle {
   0% { opacity: 0.2; transform: scale(0.7) rotate(0deg); }
   50% { opacity: 1; transform: scale(1.2) rotate(20deg); }
   100% { opacity: 0.2; transform: scale(0.7) rotate(0deg); }
-} 
+}
